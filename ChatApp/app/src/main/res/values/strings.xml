@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WhatsRic</string>
+    <string name="userName">Name</string>
+    <string name="IP">IP</string>
+    <string name="Port">Port</string>
+
+
+</resources>
