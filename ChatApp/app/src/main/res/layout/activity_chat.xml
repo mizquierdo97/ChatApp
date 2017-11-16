@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity_auth">
+    tools:context=".activity_auth"
+    android:background="@drawable/whatsapp">
 
     <TextView
         android:id="@+id/text_nick"
@@ -28,30 +29,30 @@
         android:dividerHeight="2dp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
         android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="2dip"
         android:background="@color/grey">
 
         <EditText
             android:id="@+id/input"
-            android:layout_width="150dp"
+            android:layout_width="228dp"
             android:layout_height="50dip"
-            android:paddingLeft="4dp"
-            android:hint="Write here..."
             android:background="@color/grey"
-            android:textColor="@color/black"
+            android:hint="Write here..."
             android:inputType="textNoSuggestions|textVisiblePassword"
-            android:text=""/>
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/sendbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="addText"
-            android:text="Send"/>
+            android:text="Send" />
     </LinearLayout>
 
 </LinearLayout>

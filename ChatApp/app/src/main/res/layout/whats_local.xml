@@ -30,6 +30,7 @@
         android:paddingTop="5dip"
         android:textColor="@color/black"
         android:textSize="12dip"
-        android:text="18:23"/>
+        android:text="08:39"
+        android:background="@color/grey"/>
 
 </RelativeLayout>
