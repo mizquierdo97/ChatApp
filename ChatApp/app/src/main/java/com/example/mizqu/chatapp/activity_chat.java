@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import java.util.Timer;
+import java.util.TimerTask;
+import android.os.AsyncTask;
 import android.os.Message;
 import android.view.View;
 import android.util.Log;
@@ -65,6 +68,25 @@ public class activity_chat extends Activity{
                 conversation.setSelection(conversation.getCount() - 1);
             }
         });
+
+
+        AsyncTask new_task = new AsyncTask() {
+            @Override
+            protected Object doInBackground(Object[] objects) {
+                Timer new_timer = new Timer();
+                TimerTask  retrievefromDate = new TimerTask() {
+                    @Override
+                    public void run() {
+
+                    }
+                };
+
+                new_timer.schedule(retrievefromDate,10000);
+
+                return null;
+            }
+        };
+
 
         adapter_wl.notifyDataSetChanged();
     }
