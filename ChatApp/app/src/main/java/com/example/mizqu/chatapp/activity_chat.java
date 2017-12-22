@@ -17,6 +17,8 @@ import android.util.Log;
 import java.util.logging.Logger;
 import java.util.ArrayList;
 
+import edu.upc.citm.francesc.dmobchat2.MessageREST;
+
 
 public class activity_chat extends Activity{
 
@@ -70,24 +72,29 @@ public class activity_chat extends Activity{
         });
 
 
-        AsyncTask new_task = new AsyncTask() {
-            @Override
-            protected Object doInBackground(Object[] objects) {
-                Timer new_timer = new Timer();
-                TimerTask  retrievefromDate = new TimerTask() {
-                    @Override
-                    public void run() {
-
-                    }
-                };
-
-                new_timer.schedule(retrievefromDate,10000);
-
-                return null;
-            }
-        };
-
 
         adapter_wl.notifyDataSetChanged();
     }
+
+    private class MyAsyncTask extends AsyncTask<com.example.mizqu.chatapp.Message,Void,String> {
+
+        @Override
+        protected String doInBackground(com.example.mizqu.chatapp.Message ... message) {
+
+        //ESTO FALLA :)
+      //      MessageREST.create("citmalumnes.upc.es","0000",);
+            Timer new_timer = new Timer();
+            new_timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+
+                    //AQUI CREO QUE VA ESTO...
+                   // MessageREST.retrieveFromDate()
+                }
+            },10000);
+            return "RET";
+        }
+    }
 }
+
+
