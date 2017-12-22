@@ -71,7 +71,9 @@ public class activity_chat extends Activity{
             }
         });
 
-
+        //EXECUTE ASYNC TASK
+        MyAsyncTask new_task = new MyAsyncTask();
+        new_task.execute();
 
         adapter_wl.notifyDataSetChanged();
     }
@@ -81,18 +83,18 @@ public class activity_chat extends Activity{
         @Override
         protected String doInBackground(com.example.mizqu.chatapp.Message ... message) {
 
-        //ESTO FALLA :)
-      //      MessageREST.create("citmalumnes.upc.es","0000",);
+        //TODO FIX THIS
+          // MessageREST.create("citmalumnes.upc.es","0000",message);
             Timer new_timer = new Timer();
             new_timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
 
-                    //AQUI CREO QUE VA ESTO...
+                    //TODO CALL RETRIEVE DATA
                    // MessageREST.retrieveFromDate()
                 }
             },10000);
-            return "RET";
+            return "";
         }
     }
 }
